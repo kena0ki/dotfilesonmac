@@ -1,0 +1,53 @@
+# Golang
+[[plugins]]
+repo = 'fatih/vim-go'
+on_ft = ['go']
+
+# # view for scroll (this is too slow in large file)
+# [[plugins]]
+# repo = 'wellle/context.vim'
+# on_ft = ['javascript', 'typescript']
+
+# Json Syntax
+[[plugins]]
+repo = 'leshill/vim-json'
+on_ft = ['javascript']
+
+# Javascript Syntax
+[[plugins]]
+repo = 'pangloss/vim-javascript'
+on_ft = ['javascript']
+
+# Typescript Syntax
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+on_ft = ['typescript']
+
+# JSX TSX Syntax
+[[plugins]]
+repo = 'MaxMEllon/vim-jsx-pretty'
+on_ft = ['javascript', 'typescript']
+
+#[[plugins]]
+#repo = 'jparise/vim-graphql'
+#on_ft = ['javascript','graphql']
+
+# ESLint + Flow Integration
+[[plugins]]
+repo = 'w0rp/ale'
+on_ft = ['javascript', 'typescript']
+
+## Runner
+#[[plugins]]
+#repo = 'thinca/vim-quickrun'
+#on_ft = ['javascript']
+
+## Explorer
+#[[plugins]]
+#repo = 'junegunn/fzf'
+#build = './install --all'
+#merged = 0
+#[[plugins]]
+#repo = 'junegunn/fzf.vim'
+#depends = 'fzf'
+#on_cmd = ['FZF']
