@@ -215,7 +215,7 @@ vnoremap * "zy:let @/ = @z<CR>n
 
 " コピペ系
 " ヤンク＆ペーストにクリップボードを使う
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
 "" 範囲選択でコピー
 "set clipboard+=autoselectplus
 
@@ -247,7 +247,7 @@ set fileencodings=utf-8,iso-2022-jp,cp932,sjis,euc-jp
 " 改行コード
 set fileformats=unix,dos,mac
 
-"move line up or down
+"move line up and down
 " https://vim.fandom.com/wiki/Moving_lines_up_or_down
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
