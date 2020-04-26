@@ -1,0 +1,12 @@
+# ignore anything but ...
+#  .vimrc
+#  files under .vim/rc
+#  .zshrc
+#  and .gitignore
+/*
+!/.vimrc
+!/.vim/
+/.vim/*
+!/.vim/rc/
+!/.zshrc
+!/.gitignore
