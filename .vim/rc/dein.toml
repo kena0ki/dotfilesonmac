@@ -2,7 +2,7 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-# Plubin Manager
+# Git integration
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 
