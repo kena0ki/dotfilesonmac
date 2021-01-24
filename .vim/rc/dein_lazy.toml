@@ -1,3 +1,9 @@
+
+## Rust
+#[[plugins]]
+#repo = 'rust-lang/rust.vim'
+#on_ft = ['rust']
+
 # Golang
 [[plugins]]
 repo = 'fatih/vim-go'
@@ -28,14 +34,15 @@ on_ft = ['typescript']
 repo = 'MaxMEllon/vim-jsx-pretty'
 on_ft = ['javascript', 'typescript']
 
+## Graphql Syntax
 #[[plugins]]
 #repo = 'jparise/vim-graphql'
 #on_ft = ['javascript','graphql']
 
 # ESLint + Flow Integration
 [[plugins]]
-repo = 'w0rp/ale'
-on_ft = ['javascript', 'typescript']
+repo = 'dense-analysis/ale'
+on_ft = ['javascript', 'typescript', 'rust']
 
 ## Runner
 #[[plugins]]

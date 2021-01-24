@@ -49,7 +49,10 @@ let g:jsx_ext_required = 0
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 0
 " use eslint only for javascript files
-let g:ale_linters = {'javascript': ['eslint']}
+let g:ale_linters = {}
+let g:ale_linters.javascript = ['eslint', 'tsserver']
+let g:ale_linters.typescript = ['eslint', 'tsserver']
+let g:ale_linters.rust = ['analyzer']
 " completion
 let g:ale_completion_enabled = 1
 set omnifunc=ale#completion#OmniFunc
