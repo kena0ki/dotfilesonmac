@@ -4,7 +4,7 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 [[ -z "$GOPATH" ]] && export GOPATH="$HOME/go"
 [[ ! "$PATH" =~ "$GOPATH/bin" ]] && export PATH="$PATH:$GOPATH/bin"
 # For gh
-. .ghtoken.env
+source .ghtoken.env
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
