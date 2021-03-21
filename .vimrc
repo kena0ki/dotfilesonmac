@@ -45,69 +45,6 @@ call map(dein#check_clean(), "delete(v:val, 'rf')")
 " apply mxw/vim-jsx to js
 let g:jsx_ext_required = 0
 
-" w0rp/ale lints only on save
-let g:ale_lint_on_save = 1
-let g:ale_lint_on_text_changed = 0
-" use eslint only for javascript files
-let g:ale_linters = {}
-let g:ale_linters.javascript = ['eslint', 'tsserver']
-let g:ale_linters.typescript = ['eslint', 'tsserver']
-let g:ale_linters.rust = ['analyzer']
-" completion
-let g:ale_completion_enabled = 1
-set omnifunc=ale#completion#OmniFunc
-" Put this in vimrc or a plugin file of your own.
-" After this is configured, :ALEFix will try and fix your JS code with ESLint.
-let g:ale_fixers = {
-\   'javascript': ['eslint'],
-\}
-
-" --------------------
-" Script
-" --------------------
-" https://sites.google.com/site/fudist/Home/vim-nihongo-ban/-vimrc-sample
-""""""""""""""""""""""""""""""
-" 挿入モード時、ステータスラインの色を変更
-""""""""""""""""""""""""""""""
-"let g:hi_insert = 'highlight StatusLine guifg=darkblue guibg=darkyellow gui=none ctermfg=blue ctermbg=yellow cterm=none'
-"
-"if has('syntax')
-"  augroup InsertHook
-"    autocmd!
-"    autocmd InsertEnter * call s:StatusLine('Enter')
-"    autocmd InsertLeave * call s:StatusLine('Leave')
-"  augroup END
-"endif
-"
-"let s:slhlcmd = ''
-"function! s:StatusLine(mode)
-"  if a:mode == 'Enter'
-"    silent! let s:slhlcmd = 'highlight ' . s:GetHighlight('StatusLine')
-"    silent exec g:hi_insert
-"  else
-"    highlight clear StatusLine
-"    silent exec s:slhlcmd
-"  endif
-"endfunction
-"
-"function! s:GetHighlight(hi)
-"  redir => hl
-"  exec 'highlight '.a:hi
-"  redir END
-"  let hl = substitute(hl, '[\r\n]', '', 'g')
-"  let hl = substitute(hl, 'xxx', '', '')
-"  return hl
-"endfunction
-""""""""""""""""""""""""""""""
-
-""""""""""""""""""""""""""""""
-" 自動的に閉じ括弧を入力
-""""""""""""""""""""""""""""""
-"imap { {}<LEFT>
-"imap [ []<LEFT>
-"imap ( ()<LEFT>
-""""""""""""""""""""""""""""""
-
 """"""""""""""""""""""""""""""
 " 最後のカーソル位置を復元する
 """"""""""""""""""""""""""""""
@@ -232,11 +169,6 @@ nnoremap <Down> gj
 nnoremap <Up> gk
 "左右のカーソル移動で行間移動可能にする。
 set whichwrap=b,s,<,>,[,]
-"ノーマルモードでスペース追加、改行、削除する
-"nnoremap <Space> i<Space><Esc>l
-"nnoremap <Enter> i<Enter><Esc>
-"nnoremap <BS> i<BS><Right><Esc>
-"nnoremap <Delete> i<Delete><Esc>l
 "find時にタブでファイル選択
 set wildmenu
 ""setting working directory to the current file
