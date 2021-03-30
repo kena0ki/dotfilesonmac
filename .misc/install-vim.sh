@@ -15,7 +15,7 @@ cd vim
 git pull
 make distclean # if you build Vim before
 #PYTHON3CONF=/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/config-3.6m-darwin # for python3 installed by offcial website
-PYTHON3CONF=/usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin # for python3 installed using homebrew
+PYTHON3CONF=/usr/local/Cellar/python@3.9/3.9.2_2/Frameworks/Python.framework/Versions/3.9/lib/python3.9/config-3.9-darwin # for python3 installed using homebrew
 ./configure \
     --enable-multibyte \
     --enable-perlinterp=dynamic \
