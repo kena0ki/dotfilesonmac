@@ -2,7 +2,7 @@
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 # For Golang
 [[ -z "$GOPATH" ]] && export GOPATH="$HOME/go"
-[[ ! "$PATH" =~ "$GOPATH/bin" ]] && export PATH="$PATH:$GOPATH/bin"
+[[ ! "$PATH" =~ "$GOPATH/bin" ]] && export PATH="$GOPATH/bin:$PATH"
 # For gh
 source .ghtoken.env
 
