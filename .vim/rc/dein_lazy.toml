@@ -44,10 +44,16 @@ on_ft = ['javascript', 'typescript']
 #repo = 'jparise/vim-graphql'
 #on_ft = ['javascript','graphql']
 
-# ESLint + Flow Integration
+# LSP related
 [[plugins]]
 repo = 'dense-analysis/ale'
-on_ft = ['javascript', 'typescript', 'html', 'rust', 'vue']
+on_ft = [
+  'javascript',
+  'typescript',
+  'html',
+  'vue',
+  #'rust',
+]
 hook_source = '''
   " w0rp/ale lints only on save
   " let g:ale_lint_on_enter = 0
@@ -60,7 +66,7 @@ hook_source = '''
   let g:ale_linters.javascript = ['eslint', 'tsserver']
   let g:ale_linters.typescript = ['eslint', 'tsserver']
   " let g:ale_linters.rust = ['rls']
-  let g:ale_linters.rust = ['analyzer']
+  " let g:ale_linters.rust = ['analyzer']
   let g:ale_linters.html = ['htmlhint']
   " completion
   let g:ale_completion_enabled = 1
@@ -80,6 +86,50 @@ repo = 'posva/vim-vue'
 on_ft = ['vue']
 hook_source = '''
   let g:vue_pre_processors = []
+'''
+
+# LSP related
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+on_ft = ['rust']
+#on_ft = []
+merged = 0
+rev = 'release'
+hook_source = '''
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
+nmap <silent> <C-_>p <Plug>(coc-diagnostic-prev)
+nmap <silent> <C-_>n <Plug>(coc-diagnostic-next)
+" GoTo code navigation.
+nmap <silent> <C-_>d <Plug>(coc-definition)
+nmap <silent> <C-_>t <Plug>(coc-type-definition)
+nmap <silent> <C-_>i <Plug>(coc-implementation)
+nmap <silent> <C-_>r <Plug>(coc-references)
+" Hover
+nnoremap <silent> <C-_>h :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+" color
+highlight CocErrorSign ctermbg=Red  guifg=#ff0000
+highlight CocWarningSign ctermbg=Brown guifg=#ff922b
+highlight CocInfoSign ctermbg=Yellow guifg=#fab005
+highlight CocHintSign ctermbg=Blue  guifg=#15aabf
+highlight FgCocErrorFloatBgCocFloating ctermfg=Red ctermbg=White
+"highlight FgCocHintFloatBgCocFloating ctermfg=Blue ctermbg=White
+"highlight CocErrorFloat ctermfg=White  guifg=#000000
+"highlight CocWarningFloat ctermfg=White  guifg=#000000
+"highlight CocInfoFloat ctermfg=White  guifg=#000000
+"highlight CocHintFloat ctermfg=White  guifg=#000000
+highlight link CocErrorHighlight SpellBad
+highlight link CocWarningHighlight SpellCap
+highlight link CocHintHighlight SpellCap
+highlight link CocInfoHighlight SpellCap
 '''
 
 ## Runner
