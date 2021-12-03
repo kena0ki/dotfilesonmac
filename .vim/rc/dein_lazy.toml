@@ -65,7 +65,7 @@ hook_source = '''
   let g:ale_linters = {}
   let g:ale_linters.javascript = ['eslint', 'tsserver']
   let g:ale_linters.typescript = ['eslint', 'tsserver']
-  " let g:ale_linters.rust = ['rls']
+  let g:ale_linters.rust = []
   " let g:ale_linters.rust = ['analyzer']
   let g:ale_linters.html = ['htmlhint']
   " completion
