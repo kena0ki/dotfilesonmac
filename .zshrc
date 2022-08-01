@@ -13,3 +13,4 @@ export NVM_DIR="$HOME/.nvm"
 # # local binary (for rust-analyzer)
 # export PATH="~/.local/bin:$PATH"
 
+PS1="%T %~ %#"
