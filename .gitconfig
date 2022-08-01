@@ -1,0 +1,9 @@
+[user]
+	email = ken3574.25@gmail.com
+	name = kena0ki
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[init]
+	defaultBranch = main
