@@ -210,5 +210,30 @@ au BufNewFile,BufRead *.tsx  setf typescript
 " for tools watching files. http://tokkaka.hatenablog.com/entry/2016/03/15/235655
 set backupcopy=yes
 
+" disable auto insert (i_Ctrl_@)
+inoremap <C-@> `
+
+" add closing brace
+inoremap {<C-m> {<C-m><C-m>}<C-o>k<C-h><C-m>
+
+" https://stackoverflow.com/a/47361068/12895553
+" Disable parentheses matching depends on system. This way we should address all cases (?)
+set noshowmatch
+" NoMatchParen " This doesnt work as it belongs to a plugin, which is only loaded _after_ all files are.
+" Trying disable MatchParen after loading all plugins
+function! g:FckThatMatchParen ()
+    if exists(":NoMatchParen")
+        :NoMatchParen
+    endif
+endfunction
+augroup plugin_initialize
+    autocmd!
+    autocmd VimEnter * call FckThatMatchParen()
+augroup END
+
+
+
+
 " filetypeの自動検出(最後の方に書いた方がいいらしい)
 filetype plugin on
+
